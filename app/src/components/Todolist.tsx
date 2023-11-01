@@ -7,7 +7,7 @@ interface IAddTodo {
 const Display: React.FC<IAddTodo> = ({ onTodoAdd }) => {
   const [text, setText] = useState("");
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     onTodoAdd(text);
 
