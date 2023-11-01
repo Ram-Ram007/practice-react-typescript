@@ -8,7 +8,6 @@ import { ITodo } from "./type";
 function App() {
   const [todos, setTodos] = useState<ITodo[]>([]);
 
-
   function onTodoAdd(str: string) {
     const obj: ITodo = {
       text: str,
@@ -19,9 +18,9 @@ function App() {
 
   return (
     <>
-      <Display />
+      <Display onTodoAdd={onTodoAdd} />
 
-      <List />
+      <List todos={todos} />
     </>
   );
 }
