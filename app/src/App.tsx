@@ -17,11 +17,11 @@ function App() {
   }
 
   return (
-    <>
+    <div>
       <Display onTodoAdd={onTodoAdd} />
 
       <List todos={todos} />
-    </>
+    </div>
   );
 }
 export default App;
