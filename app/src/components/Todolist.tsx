@@ -1,4 +1,18 @@
-function Display() {
+import { useState } from "react";
+
+interface IAddTodo {
+  onTodoAdd: (str: string) => void;
+}
+
+
+
+const AddTodo: React.FC<IAddTodo> = ({ onTodoAdd }) => {
+  const [text, setText] = useState("");
+
+
+  function handleSubmit(){
+    onTodoAdd()
+  }
   return (
     <>
       <h1>List app</h1>
